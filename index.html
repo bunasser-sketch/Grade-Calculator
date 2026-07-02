@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="logo.jpg" alt="شعار كلية الهندسة جامعة بني سويف" class="logo">
+    <div class="container">
+        <h1>جامعة بني سويف</h1>
+        <h1>كلية الهندسة🎓</h1>
+        <h1>حاسبة المجموع</h1>
+        <p>قم باختيار مسارك الأكاديمي، ثم أدخل درجاتك لحساب مجموعك.</p>
+        <p>*********************************</p>
+        <p>تصميم و تنفيذ الطالب: أحمد ناصر محمد</p>
+        <p>الفرقة الثانية، قسم هندسة الإلكترونيات و الإتصالات</p>
+        <p>*********************************</p>
+
+
+        <form id="gradeForm">
+            <div class="form-group">
+                <label for="levelSelect">المستوى الأكاديمي:</label>
+                <select id="levelSelect" class="form-control" required>
+                    <option value="">-- اختر المستوى --</option>
+                </select>
+            </div>
+
+            <div id="deptContainer" class="form-group hidden">
+                <label for="deptSelect">القسم:</label>
+                <select id="deptSelect" class="form-control"></select>
+            </div>
+
+            <div id="subDeptContainer" class="form-group hidden">
+            <label for="subDeptSelect">التخصص :</label>
+                <select id="subDeptSelect" class="form-control"></select>
+            </div>
+
+            <div id="termContainer" class="form-group hidden">
+                <label for="termSelect">الفصل الدراسي:</label>
+                <select id="termSelect" class="form-control"></select>
+            </div>
+
+            <div id="gradesContainer" class="hidden">
+                <h3>أدخل الدرجات:</h3>
+                </div>
+
+            <button type="submit" id="calculateBtn" class="btn-calculate">احسب المجموع</button>
+            
+            <div id="actionButtons" class="buttons-group hidden">
+                <button type="button" id="resetBtn" class="btn-half">حساب درجة أخرى</button>
+                <button type="button" id="recalculateBtn" class="btn-half">إعادة حساب الدرجة</button>
+            </div>
+        </form>
+
+        <div id="result" class="hidden">
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

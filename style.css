@@ -1,0 +1,235 @@
+/* --- 1. Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* --- 2. Background Gradient --- */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative; /* For logo positioning */
+
+    /* Golden-White-Beige Gradient from Top Right to Bottom Left */
+    background: linear-gradient(to bottom left, #E6C200 0%, #FFF8DC 30%, #FFFFFF 100%);
+    color: #333; /* Default dark text for contrast */
+}
+
+/* --- 3. College Logo --- */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px; /* Adjust size as needed, e.g., 80px, 100px */
+    height: auto;
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* --- 4. Main Container Card (Creamy White) --- */
+.container {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    
+    /* Creamy white background */
+    background-color: #FFFDF9; /* Slightly off-white */
+    
+    border-radius: 20px;
+    /* Gold border for main container */
+    border: 1px solid #D4AF37; 
+    
+    /* Elegant shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    position: relative; /* For z-index if needed */
+}
+
+/* --- 5. Typography --- */
+h1 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333; /* Dark text for title */
+}
+
+p {
+    text-align: center;
+    color: #000; /* Black for sub-text */
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* --- 6. Form Styling --- */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000; /* Black for labels */
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    /* Gold border for inputs */
+    border: 1px solid #D4AF37; 
+    border-radius: 12px;
+    background-color: #FFFDF9; /* Creamy white input background */
+    box-sizing: border-box; 
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    color: #333; /* Dark text */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #B8860B; /* Darker gold on focus */
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* --- 7. Grades Input Area --- */
+#gradesContainer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #D4AF37; /* Dashed gold separator */
+}
+
+#gradesContainer h3 {
+    font-weight: 600;
+    color: #333; /* Dark text */
+}
+
+.grade-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #FFFDF9; /* Creamy white */
+    /* Gold border for grade items */
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+}
+
+.grade-item label {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #000; /* Black label */
+    flex-basis: 70%; 
+}
+
+.grade-item input {
+    width: 110px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #D4AF37; /* Gold border */
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s;
+    background: #FFFDF9; /* Creamy white input */
+    color: #333; /* Dark text */
+}
+
+.grade-item input:focus {
+    outline: none;
+    border-color: #B8860B;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* --- 8. Buttons --- */
+.btn-calculate, .btn-half {
+    width: 100%; /* Default to full width for calculate */
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827; /* Dark text on gold */
+    background: linear-gradient(90deg, #B8860B, #E6C200); /* Gold gradient */
+    border: none; /* No extra border, gradient is enough */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(184, 134, 11, 0.3);
+}
+
+.btn-calculate:hover, .btn-half:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 25px rgba(184, 134, 11, 0.4);
+}
+
+/* Button Group for half-width buttons */
+.buttons-group {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 15px; /* Space from grades container */
+}
+
+.btn-half {
+    width: 50%; /* Make them half width */
+    /* Inherits colors from .btn-calculate */
+}
+
+/* --- 9. Result Display --- */
+#result {
+    font-size: 1.3rem; 
+    font-weight: 600;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 2px solid; /* Solid border for result box */
+    text-align: center;
+}
+
+#result h3 { /* Grade */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+}
+
+#result p { /* Message */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Result Colors (Green for >= 50, Red for < 50) */
+.result-pass { /* >= 50 */
+    background-color: #E6F7EC; /* Light Green background */
+    border-color: #28a745; /* Darker green border */
+    color: #28a745; /* Dark Green text */
+}
+.result-pass h3, .result-pass p {
+    color: #28a745; /* Ensure all text is dark green */
+}
+
+.result-fail { /* < 50 */
+    background-color: #FDEDED; /* Light Red background */
+    border-color: #dc3545; /* Darker red border */
+    color: #dc3545; /* Dark Red text */
+}
+.result-fail h3, .result-fail p {
+    color: #dc3545; /* Ensure all text is dark red */
+}
+
+.result-error { /* Input error (unchanged) */
+    background: #FFF0F0;
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+/* --- 10. Utility Class --- */
+.hidden {
+    display: none !important; /* Use !important to ensure override */
+}
